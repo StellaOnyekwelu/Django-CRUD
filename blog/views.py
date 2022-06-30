@@ -16,19 +16,19 @@ class PostCreateView(CreateView):
     model = Post
 
     fields = "__all__"
-    template_name = "blog/post_list.html"
+    template_name = "blog/post_form.html"
 
     success_url  = reverse_lazy("blog:all")
 
 class PostDetailView(DetailView):
     model = Post
-    template_name = "blog/post_list.html"
+    template_name = "blog/post_detail.html"
 
 class PostUpdateView(UpdateView):
     model = Post
 
     fields = "__all__"
-    template_name = "blog/post_list.html"
+    template_name = "blog/base.html"
 
     success_url  = reverse_lazy("blog:all")
 
@@ -40,4 +40,4 @@ class PostDeleteView(DeleteView):
 
     success_url  = reverse_lazy("blog:all")
 
-    template_name = "blog/post_list.html"
+    template_name = "blog/post_confirm_delete.html"
